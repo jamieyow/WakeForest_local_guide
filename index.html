@@ -1,48 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Guide</title>
-    <link rel="stylesheet" href="CSS/Style.css">
 
+<head>
+  <!-- Head -->
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A local guide to Wake Forest, North Carolina: where to eat, drink, and explore.">
+  <title>Home | Explore Wake Forest, NC</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-    <nav class="navbar">
-  <div class="logo">My Website</div>
+  <!-- Header -->
+  <header class="site-header">
 
-  <!-- Hamburger Button -->
- <!-- <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
-    ☰
-  </button>-->
+    <p class="site-name">
+      <a href="index.html">Explore Wake Forest</a>
+    </p>
 
-  <!-- Menu Links (Same folder file names) -->
-  <ul class="nav-links" id="nav-links">
-   <!-- <li><a href="index.html">Home</a></li>-->
-    <li><a href="Food&Drinks.html">Food&Drinks</a></li>
-    <li><a href="ThingsToDo.html">ThingsToDo</a></li>
-  </ul>
-</nav>
-<h1>Welcome to Wake Forest, North Carolina!</h1>
+    <!-- Hamburger Menu -->
+    <nav aria-label="Main menu">
+      <details class="menu">
+        <summary>☰ Menu</summary>
+        <ul class="menu-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="Food&amp;Drinks.html">Food &amp; Drinks</a></li>
+          <li><a href="ThingsToDo.html">Things to Do</a></li>
+        </ul>
+      </details>
+    </nav>
 
-<p>Welcome to Wake Forest, North Carolina!
-    Wake Forest is a beautiful and fun town to visit, there are many things for first time visitors, families and, foodies to discover here.In this local guide you will find places to eat, grab a drink, things to do and, places to see. Wake Forest was founded in 1880. This town may have started small but has grown into a bustling and vibrant community. Wake Forest is unique because there is so much this town has to offer.
+  </header>
 
-</p> 
-<ul>On thsi website you will find:
-    <li>The introduction of Wake Forest</li>
-    <li> Food and Drinks</li>
-    <li>Things to do</li>
-    
-</ul>
-     <script>
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const navLinks = document.getElementById('nav-links');
+  <!-- Main Content -->
+  <main>
 
-    hamburgerBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img
+        src="images/downtown-white-street.jpg"
+        alt="Red brick shops and old-fashioned street lamps along White Street in downtown Wake Forest"
+        class="hero-image">
+
+      <div class="hero-text">
+        <h1>Welcome to Wake Forest, North Carolina!</h1>
+        <p>
+          Wake Forest is a beautiful and fun town to visit, with many
+          things for first-time visitors, families, and foodies to
+          discover. In this local guide you will find places to eat,
+          grab a drink, things to do, and places to see. Wake Forest
+          became a town in 1880. This town may have started small, but
+          it has grown into a bustling and vibrant community. Wake
+          Forest is unique because there is so much this town has to
+          offer.
+        </p>
+      </div>
+    </section>
+
+    <!-- What's on this website -->
+    <section class="content-section">
+      <h2>On This Website You Will Find</h2>
+      <ul class="fact-list">
+        <li>The introduction of Wake Forest</li>
+        <li><a href="Food&amp;Drinks.html">Food and Drinks</a></li>
+        <li><a href="ThingsToDo.html">Things to Do</a></li>
+      </ul>
+
+      <div class="card-group">
+
+        <article class="card">
+          <img
+            src="images/small-plates.jpg"
+            alt="A small plate of tuna tartare on a crispy tortilla, topped with avocado and sprouts"
+            class="card-image">
+          <div class="card-body">
+            <h3>Food and Drinks</h3>
+            <p>
+              Farm-to-table dinners, tapas and wine, and creative
+              cocktails, all in or near downtown.
+            </p>
+            <a href="Food&amp;Drinks.html">See where to eat and drink in Wake Forest</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/park-walking-path.jpg"
+            alt="A paved walking path curving through tall green trees, with a wooden bench beside it"
+            class="card-image">
+          <div class="card-body">
+            <h3>Things to Do</h3>
+            <p>
+              Go ice skating at The Factory, walk the trails at Joyner
+              Park, or bowl a few games at Strike &amp; Barrel.
+            </p>
+            <a href="ThingsToDo.html">Explore things to do in Wake Forest</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Getting here -->
+    <section class="content-section">
+      <h2>Getting Here</h2>
+      <p>
+        From Raleigh, take <strong>US-1 North</strong> (Capital Boulevard)
+        and follow the signs for downtown Wake Forest. Free street parking
+        and public lots are available near White Street. Once you're
+        downtown, the easiest way to get around is on foot.
+      </p>
+      <p>
+        For events, maps, and news, visit the
+        <a href="https://www.wakeforestnc.gov/">official Town of Wake Forest website</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Explore Wake Forest | A WEB 110 student project</p>
+    <p class="photo-credits">
+      Photos from Wikimedia Commons:
+      downtown by Rysnap1024 (CC BY-SA 4.0),
+      small plate by Kritzolina (CC BY-SA 4.0),
+      walking path by Ser Amantio di Nicolao (CC BY-SA 4.0).
+      The food and park photos show similar places, not the exact locations.
+    </p>
+  </footer>
+
 </body>
 </html>
