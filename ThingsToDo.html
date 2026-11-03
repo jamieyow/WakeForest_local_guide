@@ -1,34 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Things to Do</title>
+  <!-- Head -->
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Things to do in Wake Forest, NC: ice skating, parks, and bowling.">
+  <title>Things to Do | Explore Wake Forest, NC</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-        <nav class="navbar">
-  <div class="logo">My Website</div>
 
-  <!-- Hamburger Button -->
- <!-- <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
-    ☰
-  </button>-->
+  <!-- Header + Hamburger Menu -->
+  <header class="site-header">
+    <p class="site-name">
+      <a href="index.html">Explore Wake Forest</a>
+    </p>
 
-  <!-- Menu Links (Same folder file names) -->
-  <ul class="nav-links" id="nav-links">
-   <li><a href="index.html">Home</a></li>
-    <li><a href="Food&Drinks.html">Food&Drinks</a></li>
-    <!--<li><a href="ThingsToDo.html">ThingsToDo</a></li>-->
-  </ul>
-</nav>
-    <h1>Things to Do</h1>
+    <nav aria-label="Main menu">
+      <details class="menu">
+        <summary>☰ Menu</summary>
+        <ul class="menu-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Food&amp;Drinks.html">Food &amp; Drinks</a></li>
+          <li><a href="ThingsToDo.html" aria-current="page">Things to Do</a></li>
+        </ul>
+      </details>
+    </nav>
+  </header>
 
-    <p> On this page you will find Things to do and places to visit.</p>
-    <ul>Things to Do:
-    <li>The Factory</li>
-    <li>E. Carroll Joyner Park</li>
-    <li>Strike and Barrel</li>
-    </ul>
+  <!-- Main Content -->
+  <main>
+
+    <!-- Page Intro -->
+    <section class="page-intro">
+      <h1>Things to Do</h1>
+      <p>On this page you will find things to do and places to visit.</p>
+    </section>
+
+    <!-- Places to Visit -->
+    <section class="content-section">
+      <h2>Places to Visit</h2>
+
+      <div class="card-group">
+
+        <article class="card">
+          <img
+            src="images/ice-skating-rink.jpg"
+            alt="Skaters gliding across an ice rink lit with blue light and snowflake patterns"
+            class="card-image">
+          <div class="card-body">
+            <h3>The Factory</h3>
+            <p>
+              A large sports and entertainment complex on South Main
+              Street with something for every age. There's ice skating
+              at Polar Ice, laser tag at Battle House, a big indoor
+              and outdoor skatepark, and baseball and softball fields.
+              Plan on two to three hours to try a few activities.
+            </p>
+            <p class="card-detail"><strong>Address:</strong> 1839 S. Main St.</p>
+            <p class="card-detail"><strong>Best for:</strong> families, rainy days, groups</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/park-walking-path.jpg"
+            alt="A paved walking path curving through tall green trees, with a wooden bench beside it"
+            class="card-image">
+          <div class="card-body">
+            <h3>E. Carroll Joyner Park</h3>
+            <p>
+              The town's largest park covers more than 100 acres of
+              rolling fields, walking trails, and gardens. Bring a
+              picnic, take a walk, or come back in the summer for
+              outdoor concerts and movie nights.
+            </p>
+            <p class="card-detail"><strong>Address:</strong> 701 Harris Rd.</p>
+            <p class="card-detail"><strong>Cost:</strong> free</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/bowling-lanes.jpg"
+            alt="A long row of shiny wooden bowling lanes, with ball returns in the front"
+            class="card-image">
+          <div class="card-body">
+            <h3>Strike &amp; Barrel</h3>
+            <p>
+              A boutique bowling alley in historic downtown, with 8
+              classic lanes. Between games you can play bocce,
+              cornhole, or arcade games, and the restaurant and full
+              bar serve food and drinks.
+            </p>
+            <p class="card-detail"><strong>Address:</strong> 413 S. Brooks St.</p>
+            <p class="card-detail"><strong>Best for:</strong> a night out, friends, birthday parties</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="content-section">
+      <h2>Tips for Your Visit</h2>
+      <ul class="fact-list">
+        <li>Joyner Park is free, so it's an easy stop between other activities.</li>
+        <li>Strike &amp; Barrel is downtown, a short walk from the restaurants on White Street.</li>
+        <li>The Factory has many different businesses, and each one sets its own hours.</li>
+        <li>Hours and prices change, so check before you go.</li>
+      </ul>
+    </section>
+
+    <!-- Link to the other main page -->
+    <p class="next-page">
+      Getting hungry? <a href="Food&amp;Drinks.html">See where to eat and drink in Wake Forest</a>
+    </p>
+
+  </main>
+
+  <!-- Footer + Photo Credits -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Explore Wake Forest | A WEB 110 student project</p>
+    <p class="photo-credits">
+      Photos from Wikimedia Commons:
+      ice rink by Annana&iuml;g (CC0),
+      walking path by Ser Amantio di Nicolao (CC BY-SA 4.0),
+      bowling lanes by TenPinGeek (CC BY-SA 3.0).
+      Photos show similar places, not the exact locations.
+    </p>
+  </footer>
 
 </body>
 </html>
