@@ -1,32 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food and Drinks</title>
+  <!-- Head -->
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Where to eat and drink in Wake Forest, NC: farm-to-table dining, tapas, and cocktails.">
+  <title>Food &amp; Drinks | Explore Wake Forest, NC</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-        <nav class="navbar">
-  <div class="logo">My Website</div>
 
-  <!-- Hamburger Button -->
- <!-- <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
-    ☰
-  </button>-->
+  <!-- Header + Hamburger Menu -->
+  <header class="site-header">
+    <p class="site-name">
+      <a href="index.html">Explore Wake Forest</a>
+    </p>
 
-  <!-- Menu Links (Same folder file names) -->
-  <ul class="nav-links" id="nav-links">
-   <li><a href="index.html">Home</a></li>
-    <!--<li><a href="Food&Drinks.html">Food&Drinks</a></li>-->
-    <li><a href="ThingsToDo.html">ThingsToDo</a></li>
-  </ul>
-</nav>
-    <h1>Food and Drinks</h1>
-    <p>The Food and Drinks here are unique and something you soon will not forget!</p>
-    <ul> Food and Drinks
-        <li> Farm table</li>
-        <li>Broadsides and Brews</li>
-        <li>Bodega</li>
-    </ul>
+    <nav aria-label="Main menu">
+      <details class="menu">
+        <summary>☰ Menu</summary>
+        <ul class="menu-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Food&amp;Drinks.html" aria-current="page">Food &amp; Drinks</a></li>
+          <li><a href="ThingsToDo.html">Things to Do</a></li>
+        </ul>
+      </details>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Page Intro -->
+    <section class="page-intro">
+      <h1>Food and Drinks</h1>
+      <p>The food and drinks here are unique and something you won't soon forget!</p>
+    </section>
+
+    <!-- Restaurants & Bars -->
+    <section class="content-section">
+      <h2>Restaurants &amp; Bars</h2>
+
+      <div class="card-group">
+
+        <article class="card">
+          <img
+            src="images/farm-table-plate.jpg"
+            alt="A fillet of grilled salmon on creamy butternut squash, topped with fresh herbs and a slice of lemon"
+            class="card-image">
+          <div class="card-body">
+            <h3>Farm Table</h3>
+            <p>
+              A locally owned farm-to-table restaurant that has been
+              part of Wake Forest since 2014. The menu is built around
+              fresh, local ingredients, and there's a patio for warm
+              evenings. It's a good choice for a sit-down dinner.
+            </p>
+            <p class="card-detail"><strong>Address:</strong> 960 Gateway Commons Cir.</p>
+            <p class="card-detail"><strong>Best for:</strong> dinner, special occasions</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/cocktail.jpg"
+            alt="A red cocktail in a stemmed glass with an orange peel twist, sitting on a wooden bar"
+            class="card-image">
+          <div class="card-body">
+            <h3>Broadsides &amp; Brews</h3>
+            <p>
+              A cozy downtown bar with a book-lover's theme that calls
+              itself "Wake Forest's Living Room." It's known for
+              creative, carefully made cocktails and a relaxed place
+              to sit and talk.
+            </p>
+            <p class="card-detail"><strong>Address:</strong> 223 S. White St.</p>
+            <p class="card-detail"><strong>Best for:</strong> evening drinks, meeting friends</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="images/small-plates.jpg"
+            alt="A small plate of tuna tartare on a crispy tortilla, topped with avocado and sprouts"
+            class="card-image">
+          <div class="card-body">
+            <h3>Bodega Tapas &amp; Wine</h3>
+            <p>
+              A small downtown restaurant serving tapas, which are
+              small plates meant for sharing. The menu has hot and
+              cold dishes with flavors from around the world, plus a
+              strong wine list. Order a few plates and try a little of
+              everything.
+            </p>
+            <p class="card-detail"><strong>Address:</strong> 110 S. White St.</p>
+            <p class="card-detail"><strong>Best for:</strong> sharing with friends, wine lovers</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="content-section">
+      <h2>Tips for Eating Downtown</h2>
+      <ul class="fact-list">
+        <li>Weekend evenings get busy, so plan to arrive early or make a reservation.</li>
+        <li>Bodega Tapas &amp; Wine and Broadsides &amp; Brews are both on White Street, so you can walk from dinner to drinks.</li>
+        <li>Farm Table is a short drive from downtown, so plan for parking there.</li>
+        <li>Hours change by season, so check a restaurant's hours before you go.</li>
+      </ul>
+    </section>
+
+    <!-- Link to the other main page -->
+    <p class="next-page">
+      Done eating? <a href="ThingsToDo.html">Find things to do in Wake Forest</a>
+    </p>
+
+  </main>
+
+  <!-- Footer + Photo Credits -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Explore Wake Forest | A WEB 110 student project</p>
+    <p class="photo-credits">
+      Photos from Wikimedia Commons:
+      salmon plate by HaJunkiyada (CC BY-SA 4.0),
+      cocktail by Shixart1985 (CC BY 2.0),
+      small plate by Kritzolina (CC BY-SA 4.0).
+      Photos show the type of food and drink, not the exact restaurant or bar.
+    </p>
+  </footer>
+
 </body>
 </html>
