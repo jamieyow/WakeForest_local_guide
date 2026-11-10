@@ -1,4 +1,31 @@
+/* 0. Variables */
+
+:root {
+  --color-green:       #1f4d3a;
+  --color-green-dark:  #143326;
+  --color-green-light: #2d6a51;
+  --color-brick:       #9c3d22;
+  --color-gold:        #f2c14e;
+  --color-cream:       #faf7f2;
+  --color-white:       #ffffff;
+  --color-text:        #222222;
+  --color-border:      #e2ddd3;
+  --font-heading: "Lora", Georgia, "Times New Roman", serif;
+  --font-body:    "Source Sans 3", Arial, Helvetica, sans-serif;
+  --shadow-small: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 10px 24px rgba(0, 0, 0, 0.15);
+  --radius: 10px;
+  --header-height: 72px;
+}
+
 /* 1. Base Styles */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 * {
   box-sizing: border-box;
@@ -6,9 +33,9 @@
 
 body {
   margin: 0;
-  background-color: #faf7f2;
-  color: #222222;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-body);
   font-size: 18px;
   line-height: 1.6;
 }
@@ -16,38 +43,43 @@ body {
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #1f4d3a;
+  font-family: var(--font-heading);
+  color: var(--color-green);
   line-height: 1.2;
 }
 
 a {
-  color: #9c3d22;
+  color: var(--color-brick);
   font-weight: bold;
 }
 
 a:hover {
-  color: #1f4d3a;
+  color: var(--color-green);
 }
 
 /* 2. Header */
 
 .site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  background-color: #1f4d3a;
+  background: linear-gradient(to right, var(--color-green), var(--color-green-dark));
+  box-shadow: var(--shadow-small);
 }
 
 .site-name {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-heading);
   font-size: 1.5rem;
 }
 
 .site-name a {
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -55,24 +87,22 @@ a:hover {
 
 .menu {
   position: relative;
-}
-
-.menu summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 8px 16px;
-  border: 2px solid #ffffff;
-  border-radius: 6px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.menu summary:hover {
-  background-color: #2d6a51;
+  & summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: 2px solid var(--color-white);
+    border-radius: 6px;
+    color: var(--color-white);
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: var(--color-green-light);
+    }
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
 }
 
 .menu-links {
@@ -84,26 +114,24 @@ a:hover {
   margin: 8px 0 0 0;
   padding: 8px 0;
   list-style: none;
-  background-color: #ffffff;
-  border: 2px solid #1f4d3a;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-green);
   border-radius: 6px;
-}
-
-.menu-links a {
-  display: block;
-  padding: 10px 16px;
-  color: #1f4d3a;
-  text-decoration: none;
-}
-
-.menu-links a:hover {
-  background-color: #faf7f2;
-  text-decoration: underline;
-}
-
-.menu-links a[aria-current="page"] {
-  border-left: 5px solid #9c3d22;
-  color: #9c3d22;
+  box-shadow: var(--shadow-large);
+  & a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--color-green);
+    text-decoration: none;
+    &:hover {
+      background-color: var(--color-cream);
+      text-decoration: underline;
+    }
+    &[aria-current="page"] {
+      border-left: 5px solid var(--color-brick);
+      color: var(--color-brick);
+    }
+  }
 }
 
 /* 4. Main Content */
@@ -127,7 +155,7 @@ main {
 .content-section h2 {
   font-size: 1.8rem;
   padding-bottom: 8px;
-  border-bottom: 3px solid #9c3d22;
+  border-bottom: 3px solid var(--color-brick);
 }
 
 .fact-list {
@@ -136,6 +164,23 @@ main {
 
 .fact-list li {
   margin-bottom: 12px;
+}
+
+.day-plan {
+  margin: 0;
+  padding: 20px 20px 20px 48px;
+  background-color: var(--color-white);
+  border-left: 6px solid var(--color-green);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-small);
+}
+
+.day-plan li {
+  margin-bottom: 12px;
+}
+
+.day-plan li:last-child {
+  margin-bottom: 0;
 }
 
 .next-page {
@@ -158,7 +203,8 @@ img {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-large);
 }
 
 .hero-text h1 {
@@ -176,16 +222,29 @@ img {
 
 .card {
   flex: 1 1 300px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
+  max-width: 540px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow-small);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-large);
 }
 
 .card-image {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  transition: filter 0.25s ease;
+}
+
+.card:hover .card-image {
+  filter: brightness(1.08) saturate(1.2);
 }
 
 .card-body {
@@ -206,8 +265,8 @@ img {
 
 .site-footer {
   padding: 24px;
-  background-color: #1f4d3a;
-  color: #ffffff;
+  background: linear-gradient(to left, var(--color-green), var(--color-green-dark));
+  color: var(--color-white);
   text-align: center;
 }
 
@@ -223,18 +282,21 @@ img {
 
 a:focus,
 summary:focus {
-  outline: 3px solid #9c3d22;
+  outline: 3px solid var(--color-brick);
   outline-offset: 3px;
 }
 
 .site-header a:focus,
 .site-header summary:focus {
-  outline-color: #f2c14e;
+  outline-color: var(--color-gold);
 }
 
 /* 9. Responsive Styles */
 
 @media (max-width: 600px) {
+  :root {
+    --header-height: 60px;
+  }
   body {
     font-size: 16px;
   }
@@ -257,7 +319,27 @@ summary:focus {
   .content-section h2 {
     font-size: 1.5rem;
   }
+  .card {
+    max-width: none;
+  }
   .card-image {
     height: 180px;
+  }
+  .day-plan {
+    padding: 16px 16px 16px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .card,
+  .card-image,
+  .menu summary {
+    transition: none;
+  }
+  .card:hover {
+    transform: none;
   }
 }
